@@ -1,29 +1,17 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import "../styles/nav.css";
-import Image from 'react-bootstrap/Image';
+import React from "react";
 
-function Navbar() {
-  const [showResponsiveNav, setShowResponsiveNav] = useState(false);
-
-  const toggleNavbar = () => {
-    setShowResponsiveNav(!showResponsiveNav);
-  };
-
+function Nav() {
   return (
-    <header style={{ position: "relative", zIndex: "9999" }}> 
-      <Link to="/Home" style={{textDecoration:"none", margin:0}}>
-        <div className="logoPage">
-          <h3 style={{margin:"0",marginTop:"10px",color:"#ffff",letterSpacing:"1px", fontSize:"35px"}}>DossardSearch</h3>
-        </div>
-      </Link>
-      {/* <Image src="camera.png" style={{ width: '50px', height: '50px'}} /> */}
-      <nav className={showResponsiveNav ? "responsive_nav" : ""}>
-        <Link to="/Home">Home</Link>
-        <Link to="/BrowsePhotos">Browse Photos</Link>
-      </nav>
-    </header>
+    <div>
+      <header className="Wrapper">
+        <nav className="Content logo">
+          <h1 className="logo title fw-bold fs-1">
+            Projet<span className="logo">ML</span>
+          </h1>{" "}
+        </nav>
+      </header>
+    </div>
   );
 }
 
-export default Navbar;
+export default Nav;

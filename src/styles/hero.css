@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+/* Wrapper */
+header.Wrapper {
+  width: 100%;
+  user-select: none;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the shadow effect */
+}
+
+/* Content */
+nav.Content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transform: translate(0, 50%);
+  padding: 0 8rem;
+}
+
+nav.Content h1 {
+  color: var(--white);
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: -0.1em;
+}
+
+@media screen and (max-width: 768px) {
+  nav.Content {
+    padding: 0 3rem;
+  }
+  nav.Content h1 {
+    font-size: 20px;
+  }
+}
+
+/* Logo */
+img.Logo {
+  width: 45px;
+  height: 35px;
+  margin-right: 8px;
+}
+.logo {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  letter-spacing: 2px !important;
+}
+.logo span {
+  color: #ed1c24;
+}
+.logo h1 {
+  color: #000 !important;
+}
+body {
+  background-color: #efefef;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 40px;
+  }
+}
+.hero {
+  background: url(../assets/hero_Ml.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 40px 0 0;
+  padding-bottom: 0px;
+  width: 100%;
+  position: relative; /* Add this line */
+}
+
+.hero:before {
+  content: "";
+  background-color: #000;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-bar {
+  position: absolute;
+  bottom: 15vh;
+  left: 0;
+  width: 100%;
+  margin-top: 50px;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 40px 0;
+  padding-bottom: 40px;
+}
+.fnumber-input {
+  border: 3px solid #fff;
+  font-family: Roboto Slab, serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 17px;
+  transition: all 0.2s ease-in-out;
+  width: 100% !important;
+  flex: 1 0 400px;
+}
+
+.hero__heading--outline,
+.title span {
+  text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8),
+    -3px 0px 7px rgba(81, 67, 21, 0.8), 0px 4px 7px rgba(81, 67, 21, 0.8);
+}
+.hero__heading {
+  color: #fff;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 75px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  text-align: left;
+  width: 90%;
+}
+.title span {
+  color: #fff;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.recherche {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 20px;
+  height: 68px;
+  flex: 1 0;
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  border-color: #ed1c24;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  background-clip: padding-box;
+  background-color: #ed1c24;
+  font-weight: 800;
+  padding: 0 65px 0 21px;
+  text-transform: uppercase;
+}
+
+.az label {
+  margin-bottom: 8px;
+  color: #212b36;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+.image-upload {
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.image-uploads {
+  border: 1px solid rgba(145, 158, 171, 0.32);
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  height: auto;
+}
+.image-upload input[type="file"] {
+  width: 100%;
+  opacity: 0;
+  height: 90px;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
+.image-upload .image-uploads {
+  text-align: center;
+  width: 100%;
+  padding: 50px 0;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+}
+.image-uploads img {
+  max-width: 100%;
+  height: auto;
+  width: 41px;
+  height: 41px;
+}
+.image-upload .image-uploads h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212b36;
+}
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.image-item img {
+  width: 100px;
+  height: 100px;
+}
+
+.image-item p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.uploads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+.image-container {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+}
+.image-container img {
+  max-width: 350px;
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+}
+
+.gallery h2 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  letter-spacing: 2px !important;
+  color: #ed1c24;
+  font-weight: 700;
+  margin: 30px 0;
+  text-align: center;
+}

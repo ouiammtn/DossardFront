@@ -1,22 +1,28 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/nav';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/nav2";
 //import Footer from "./components/footer";
-import Home from "./Home" ; 
-import Browse from "./BrowsePhotos" ; 
+import Home from "./Home";
 
-
-
+import Upload from "./components/upload";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Browse" element={<Browse />} />
-      </Routes>
-      {/* <Footer/> */}
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/Upload" element={<Upload />} />
+          <Route
+            path="/Home"
+            element={
+              <>
+                <Home />
+              </>
+            }
+          />
+        </Routes>{" "}
+      </div>
     </Router>
   );
 }
