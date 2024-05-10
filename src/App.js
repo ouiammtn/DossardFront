@@ -13,14 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/Upload" element={<Upload />} />
-          <Route
-            path="/Home"
-            element={
-              <>
-                <Home />
-              </>
-            }
-          />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>{" "}
       </div>
     </Router>

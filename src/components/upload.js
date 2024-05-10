@@ -1,6 +1,7 @@
 import "../styles/upload.css";
 import React, { useState } from "react";
 import upload from "../assets/upload.svg";
+import axios from "axios"; // Import Axios for making HTTP requests
 
 const Upload = () => {
   const [files, setFiles] = useState([]);
@@ -21,6 +22,40 @@ const Upload = () => {
       reader.readAsDataURL(file);
     });
   };
+
+  const handleSubmit = async () => {
+    // Create a new FormData object
+    const formData = new FormData();
+
+    // Append each file to the FormData object
+    files.forEach((file) => {
+      formData.append("files", file);
+    });
+    console.log(formData);
+    try {
+      // Make a POST request to the API endpoint with the FormData object
+      const response = await axios.post("/upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data", // Set content type to multipart/form-data
+        },
+        onUploadProgress: (progressEvent) => {
+          // Update upload progress
+          const progress = Math.round(
+            (progressEvent.loaded / progressEvent.total) * 100
+          );
+          setUploadProgress(progress);
+        },
+      });
+
+      // Handle successful response
+      console.log("Upload successful", response);
+      // Optionally, you can do something with the response data here
+    } catch (error) {
+      // Handle error
+      console.error("Error uploading files", error);
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -57,7 +92,7 @@ const Upload = () => {
                       </div>
                     ))}
                   </div>
-                  <button>Upload</button>
+                  <button onClick={handleSubmit}>Upload</button>
                 </div>
               </div>
             </div>
