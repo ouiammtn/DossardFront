@@ -57,6 +57,7 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2);
+  color: red;
 }
 
 nav a:hover:before {
@@ -64,7 +65,6 @@ nav a:hover:before {
 }
 
 nav a:focus {
-  border-bottom: 2px solid rgb(58, 119, 216);
   transition: all 0.7s ease-in-out;
 }
 
@@ -87,7 +87,7 @@ nav a:focus:before {
 }
 
 #dropdown-basic {
-  color: white;
+  color: rgb(194, 49, 49);
 }
 
 .iconsnav {
