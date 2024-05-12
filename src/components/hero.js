@@ -89,7 +89,7 @@ const Hero = () => {
                 />
                 <button type="submit" className="recherche">
                   Find my pictures
-            </button>
+                </button>
               </form>
             </div>
           </div>
@@ -99,20 +99,20 @@ const Hero = () => {
       </div>
 
       <div className="container">
-      <div className="row">
-        {images.length === 0 && (
+        <div className="row">
+          {images.length === 0 && (
             <div className="col-md-12">
               <p className="no-images-message">Sadly you weren't captured in any images 😞</p>
             </div>
           )}
           {images.map((imageUrl, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-md-6 col-lg-4">
               <div className="image-container">
-              <img
-                    src={imageUrl}
-                    alt={`Image ${index}`}
-                    style={{ width: "350px", height: "350px", borderRadius: "5px" }}
-                  />
+                <img
+                  src={imageUrl}
+                  alt={`Image ${index}`}
+                  style={{ width: "350px", height: "350px", borderRadius: "5px" }}
+                />
                 <div className="download-overlay">
                   <button className="download"><FaDownload /></button>
                 </div>
