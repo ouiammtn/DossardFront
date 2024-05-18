@@ -70,6 +70,7 @@ const Upload = () => {
             <div className="image-uploads">
               <img src={upload} alt="upload icon" />
               <h4>Drag and drop a file to upload</h4>
+              <button type="submit">Upload</button>
               <div className="uploads">
                 {files.map((file, index) => (
                   <div key={index} className="image-item">
@@ -93,7 +94,7 @@ const Upload = () => {
                   </div>
                 ))}
               </div>
-              <button type="submit">Upload</button>
+              
             </div>
           </div>
           <div className="upload-status-container">
